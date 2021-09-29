@@ -1,0 +1,354 @@
+:root {
+    --white-color : #fff;
+    --black-color : #000;
+    --text-color : black;
+    --border-color : #dbdbdb;
+    --primary-color : black;
+    --navbar-color : #f5f5f5;
+    --icon-hover-color : #e5e5e5;
+    --text-primary-color :#7e7e7e;
+}
+/* font chữ cho cả trang */
+* {
+    box-sizing: inherit;
+    /* font-family: Blippo, fantasy; */
+    font-family: 'Roboto', sans-serif;
+}
+/* cỡ chữ cho cả trang */
+html {
+    line-height: 1.5rem;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    color: var(--primary-color);
+}
+.body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.vnd {
+    position: relative;
+    font-size: 1.05rem;
+    top: -5px;
+
+}
+/* RESPONSIVE */
+
+.gird__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.gird_colum-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+.gird_colum-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+    margin-top: 10px;
+}
+.gird_colum-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+/* MODAL LAYOUT */
+
+.modal-login {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    overflow-y: scroll;
+}
+.container-modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 92px;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: none;
+}
+.container-modal-notify {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 92px;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.container-modal-reponsive {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: none;
+}
+.container-modal-loading {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+    z-index: 1;
+}
+.container-modal-loading-product {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+}
+.container-modal-loading-sex {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+}
+.loading.mar {
+    margin-top: -200px;
+}
+.loading {
+    margin-bottom: 180px;
+}
+.container-modal.success {
+    top: 0px;
+    z-index: 10000;
+    display: block;
+}
+.container-modal-white {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    background-color: transparent;
+    z-index: 1;
+}
+.container-modal-white.show {
+    display: flex;
+}
+.container-modal.show {
+    display: block;
+}
+.modal__overlay {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    background-color: var(--white-color);
+    margin: auto;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+/* BUTTON */
+
+.btn-shop {
+    background-color: var(--primary-color);
+    width: 92px;
+    height: 41px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 20px;
+    padding: 0 8px;
+    outline: none;
+    cursor: pointer;
+    color: var(--white-color);
+}
+
+.select-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 200px;
+    height: 36px;
+    background-color: var(--white-color);
+    padding: 0 8px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+} 
+
+/* pagination */
+
+.pagination {
+}
+.pagination .pagination__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination__list {
+    list-style: none;
+}
+
+.pagination_item .pagination_item-link {
+    text-decoration: none;
+}
+.pagination_item .pagination_item-link {
+    display: block;
+    height: 30px;
+    min-width: 40px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    border-radius: 2px;
+    color: #939393;
+    margin-right: 30px;
+}
+.pagination_item .margin-r {
+    margin-right:0px;;
+ } 
+
+.pagination_item .pagination_item-link-check {
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+.pagination_item .pagination_item-link-check:hover {
+    background-color: rgb(204, 99, 99);
+}
+
+/* MARGIN */
+
+.mg-t-10 {
+    margin-top: 10px;
+}
+.mg-t-20 {
+    margin-top: 20px;
+}
+.mg-t-30 {
+    margin-top: 30px;
+}
+.mg-t-40 {
+    margin-top: 40px;
+}
+.mg-t-80 {
+    margin-top: 80px;
+}
+.mg-b-40 {
+    margin-bottom: 40px;
+}
+.ma-r-10 {
+    margin-right: 10px;
+}
+.mg-t-100 {
+    margin-top: 150px;
+}
+/* GUTTER */
+
+.row.gutter-16 {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row.gutter-16 .col {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.row.gutter-12 {
+    margin-left: -6px;
+    margin-right: -6px;
+}
+.row.gutter-12 .col {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+
+
+.down {
+    font-size: 1.8rem;
+}
+
+
+
+
+/* SLIDER */
+
+.slick-prev:before, .slick-next:before {
+    margin-top: 2px;
+    font-size: 30px !important;
+    color: black !important;
+}
+.slick-next {
+    position: absolute !important;
+    top: calc( 50% - 100px ) !important;
+    transform: translate(0, -50%) !important;
+    right: 30px !important;
+}
+.slick-prev {
+    position: absolute !important;
+    top: calc( 50% - 100px ) !important;
+    transform: translate(0, -50%) !important;
+    left: 25px !important;
+}
+.slick-initialized{
+    position: relative !important;
+}
+
+
+
+/* no-direction */
+
+.no-direction {
+    text-decoration: none !important;
+}
+
+.notfound {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 25vh;
+}
+
+.notfound-text {
+    font-family: Blippo, fantasy;
+    font-size: 3rem;
+}
